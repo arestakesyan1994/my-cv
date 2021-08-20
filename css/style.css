@@ -1,0 +1,214 @@
+:root{
+    --bg:#10b7ff;
+    --bg-border:#08648b;
+    --bg-gridline: linear-gradient(0.25turn,#0789c1, #000);
+    --tx:#fff;
+    --bg-div-2:#000;
+    --gray:#111;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.parent{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-auto-rows: 1fr;
+}
+
+.menu{
+    height: 100vh;
+    background: var(--bg-gridline);
+    display: grid;
+    padding-left: 10px;
+    align-content: center;
+    position: sticky;
+    top: 0;
+}
+
+.parent>div:nth-child(2){
+    background: var(--bg-div-2);
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 20px;
+    padding: 30px 0;
+    width: 100%;    
+}
+
+img{
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 3px var(--bg-border);
+}
+
+.parent>div:nth-child(2) h1{
+    color: var(--bg);
+    font-family: gabriola, serif;
+    text-shadow: 1px 1px var(--bg-border);
+    font-size: 45px;
+    line-height: .9em;
+}
+
+.parent h2{
+    color: var(--bg-border);
+    font-family: gabriola, serif;
+    text-shadow: 1px 1px var(--tx);
+    padding-left: 20px;
+}
+
+.parent h3{
+    line-height: 1.5em;
+}
+
+.parent p,.parent li, .parent h4, .parent span{
+    text-shadow: .75px .5px .5px var(--bg);
+}
+
+.parent h3{
+    color: var(--bg-border);
+    text-shadow: .75px .75px .5px var(--gray);
+}
+
+.menu h2, .menu span, .menu a{
+    color: var(--tx);
+}
+
+.div-mas-1>div{
+    display: flex;
+    padding:5px;
+    width: 100%;
+    gap: 20px;
+}
+
+.div-mas-1 i{
+    color: var(--tx);
+    text-shadow: 1px 1px var(--bg-border);
+    width: 20px;
+}
+
+.div-mas-2{
+    display: grid;
+    width: 80%;
+    grid-auto-rows: 40px;
+    padding-top: 30px;
+}
+
+.a1{
+    width: 100%;
+    height: 100%;
+    border-bottom:1px solid var(--bg-border);
+    text-align: center;
+    padding-top: 10px;
+    color: var(--bg-border);
+    font-weight: 600;
+    text-shadow: 1px 1px var(--bg);
+}
+
+.a1:hover{
+    background-color: var(--bg-border);
+    border: 1px groove var(--bg);
+    color: var(--tx);
+    border-bottom:2px solid var(--tx);
+    box-shadow: 0 0 3px 1px var(--tx);
+}
+
+.a2{
+    background-color: var(--gray);
+    color: var(--tx);
+    border-bottom:2px solid var(--tx);
+    box-shadow: 0 0 3px 1px var(--tx);
+}
+
+#EXPERIENCE, #EDUCATION, #SKILLS, #INTERESTS, #LANGUAGES, #PERSONAL_PROJECTS{
+    width: 90%;
+    text-align: left;
+    box-shadow: 0px 0px 2px 1px var(--bg-border);
+    padding: 20px;
+    background-color:var(--tx);
+    margin: auto;
+    height: auto;
+}
+
+#EXPERIENCE:hover, #EDUCATION:hover, #SKILLS:hover, #INTERESTS:hover, #LANGUAGES:hover, #PERSONAL_PROJECTS:hover{
+    box-shadow: 0px 0px 3px 3px var(--bg-border);
+    transform: scale(1.02);
+    transition: 1s;
+}
+
+#EXPERIENCE>div>div, #EDUCATION>div>div, #LANGUAGES>div>div, #PERSONAL_PROJECTS>div>div{
+    margin: 5px;
+    border-bottom:1px solid var(--bg-border);
+    padding-bottom: 20px;
+}
+
+#SKILLS span, #INTERESTS span{
+    padding: 10px 15px;
+    background-color: var(--bg-border);
+    color: var(--tx);
+    line-height: 2.5em;
+    border-radius: 10px;
+}
+
+#INTERESTS span{
+    background-color: var(--tx);
+    color: var(--bg-border);
+    box-shadow: 0px 0px 3px 1px var(--bg-border);
+}
+
+#SKILLS span:hover{
+    transition: 1s;
+    background-color: var(--gray);
+    /* color: var(--bg-border); */
+    box-shadow: 0px 0px 3px 3px var(--bg-border);
+}
+
+#INTERESTS span:hover{
+    transition: 1s;
+    background-color: var(--bg-border);
+    color: var(--tx);
+    box-shadow: 0px 0px 3px 3px var(--gray);
+}
+
+header{
+    padding: 20px 0 0 20px;
+    display: none;
+}
+
+.menu_click{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.close{
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+#btn{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 26px;
+}
+
+#btn button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+#btn i{
+    color: var(--tx);
+    font-size: 35px;
+    cursor: pointer;
+}
+#btn i:hover{
+    text-shadow: 0px 0px 5px var(--bg);
+}
