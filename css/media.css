@@ -1,0 +1,11 @@
+@media (max-width:500px){
+    .menu{
+        display: none;
+    }
+    header{
+        display: block;
+    }
+    .close{
+        display: block;
+    }
+}
